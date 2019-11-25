@@ -1,0 +1,51 @@
+/* LoginField styles */
+
+.formField {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: 400px;
+  /* border-bottom: 1px solid #bcbdc0; */
+}
+
+.formFieldHeader {
+  /* Style for "Email" */
+  width: 70;
+  float: left;
+  height: 25px;
+  color: #383838;
+  font-family: Vitesse, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.formFieldPlaceholderInput {
+  /* Style for "johndoe@co" */
+  width: 400px;
+  /* height: 25px; */
+  color: #008248;
+  float: left;
+  font-family: Vitesse;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  /* Style for long bottom border line */
+  border: none;
+  border-bottom: 1px solid #bcbdc0;
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #008248;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #008248;
+}
+
+::placeholder {
+  color: #008248;
+}

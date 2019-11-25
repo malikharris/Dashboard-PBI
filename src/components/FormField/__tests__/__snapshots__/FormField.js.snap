@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="formField"
+>
+  <div
+    className="formFieldHeader"
+  >
+    Header
+  </div>
+  <input
+    className="formFieldPlaceholderInput"
+    onChange={[Function]}
+    placeholder="placeholder"
+    type="text"
+    value="A sample value"
+  />
+</div>
+`;

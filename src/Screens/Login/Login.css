@@ -1,0 +1,141 @@
+#loginScreenContainer {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  flex-flow: row;
+  /* IE stuff */
+  -ms-flex-flow: row;
+}
+
+.formViewBlock {
+  text-align: center;
+  height: auto;
+}
+
+#loginImageView {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#loginImage {
+  flex: 1;
+}
+
+#loginFormView {
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-align-items: center;
+  /* Safari 7.0+ */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+#loginFormDiv {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+#emailPromptText {
+  /* Style for "Enter your" */
+  width: 463px;
+  height: 19px;
+  color: #707070;
+  font-family: Interstate;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+#backButton {
+  background-color: rgba(255, 252, 252, 0);
+  border: solid 1px #008248;
+  border-radius: 7px;
+  margin-top: 20px;
+  width: 100px;
+}
+
+#backButton:hover {
+  transform: translateY(-7%);
+  transition-duration: 100ms;
+}
+
+#coreLogo {
+  width: 224px;
+  height: 103px;
+}
+
+#signUpDiv {
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#rememberMeSegment {
+  flex: 1;
+  float: left;
+  font-family: Forza, sans-serif;
+  color: #008348;
+  font-weight: 500;
+}
+
+.rememberMeCheckbox {
+  transform: scale(1.3);
+  float: left;
+}
+
+#signUpSegment {
+  background-color: #fff;
+  cursor: pointer;
+  flex: 1;
+  float: right;
+}
+
+#signUpSegmentText {
+  font-family: Forza, sans-serif;
+  color: #008348;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 12pt;
+}
+
+#subcontractorLoginButtonContainer {
+  padding-top: 25px;
+  flex-direction: row;
+  justify-content: center;
+  clear: both;
+}
+
+#forgotPasswordView {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#forgotPasswordText {
+  color: #008348;
+  font-family: Forza, sans-serif;
+  text-decoration: underline;
+  font-size: 10pt;
+}
+
+#copyrightFooter {
+  font-family: 'Interstate', sans-serif;
+  line-height: 13px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #707070;
+  /* margin-bottom: 68px; */
+}
+
+/* Set a max height to preserve the centering of the login form */
+.headerOrFooter {
+  height: 100px;
+  width: 100%;
+}

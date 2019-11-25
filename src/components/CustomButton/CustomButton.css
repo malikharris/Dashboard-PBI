@@ -1,0 +1,43 @@
+/** Button Styles */
+
+.buttonView {
+  width: 229px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #008248;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.buttonText {
+  width: auto;
+  height: 16px;
+  margin: auto;
+  color: white;
+  font-family: Forza;
+  font-size: 14px;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+}
+
+.grid-btn {
+  margin: 10px;
+  padding: 3px;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #bbbdc0;
+  /* background-color: rgba(28, 155, 211, 0.1); */
+}
+
+/* .grid-btn:focus {
+  outline: 1px solid var(--primary-color);
+} */
+
+.grid-btn-text {
+  /* color: #1c9bd3; */
+  font-family: Interstate;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 8px;
+}

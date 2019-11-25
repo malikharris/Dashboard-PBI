@@ -1,0 +1,36 @@
+import React, {useState} from 'react';
+import Report from 'powerbi-report-component';
+
+const Dashboard =()=>{
+	const models = window["powerbi"].models;
+	const accessToken= "H4sIAAAAAAAEAB1WNa7FCpbcy0_dkpla6sB4zcyZmZk9mr3Pm45PnaRU9D__WOk7zGnxz7__UfMqQUWaR3ldZYyyC3IlHfrnVas1xejElyjUL4NzxhRXaUmwgiVvnlb9vTM8U3m5cGKQT9dxUREFMB00TjHVfA7hBo9dgavUTYyeQGdIRp_gfUmh9irvCk24JJfXmXLjXkr35IpuUsv8aE7RNFCBwBUmPSa2-poWivtv5s_uksWwc39I48d9uuuMzoNOCcqKyGLbLrXI2XIEQda6iyT36bUt7vBxs5wiYgAxG8uEYT79AplxDVSNr01KU43LLkkpOoWnJjjCMAu7Pb_oLyXvYBu8XNnnRk4VjxiTSbudAOu2H0uzFrETQ0B1SJ5ovcg0U2W4nk1mMCic6fxU6smii5CYXTmCjzgrhDkiYX3ONDoEc705FUSOisY14vCswMB8UZ9OYSgr8HMP38CRvGqTdtXf4cZH5dc9sVRNDS2deSWXhyVyOyYPKGriuJtkfA18P89BiDLjvVNv5xZ2Yc9ymlFUbM0N65WXMCbcMa060wqBF4tvqRaoykETOCis_ELT_ILo_Os6rW0Ma7Vnm4Py4m1Oslzr3szIYBQbJv9aBY6VsZYW6otQ5DfwaDLt3g4igK7DZ_Ss2ruF5nFhM_4AmC3KaCwnfYYL8yQTY9NHaT9OHWo2BHYzGkEogb0thmnXMT3uEttifeeGgN8PnM0OeoX37xp1TU1LCzeHs03Ywm0zxyAUDbZVIpjWGjNCyQVdHwJ1KAvdgwNiK7Xy2ylqMxThJ5aVgBoGy6_AabgVVcs5e8cSyrvalFjqcMYzpZ__KysQfKHNoz2w9YvSavRZv7WhLUMqe5Jh07VrEJZ6qXlQnAac68PGmvJpa9bkfcM_Rv1TPC08W92mHW5q7V4-Eo36d-lCZFWgCjo4q62xoXRcOw535xXNKCyeAQyj6mBhUDJGHSpOE-juwS3HldViDaW_T5L6IbU1-ZrdNZDPqG2n0RHWykjTI3d6Xc-xSG3xqo-2pxRipMJB_k8eDW2NUUcEkfCDOFGYgV0PfeZsZXGbr7dwVr1bQ9dXyih_ehgeASsBi92erKOoyUqjQU6CSfQIcoTODsR606vrpWHg57ITT7wwKfctKOGGXxJW6e-nEa4yhPeIWKRCQHnyOIDnGs10wzxgWqhlGOgUBdIBj9rR8bBWIbawFyaqr5_QBjZSXoJrYzBSOOXjDtpP8psA98roiIBWS1rTDkujWRIUqgcX9chZvM2tCLXagKztJMHj7YvxF6NsrxCaSRMnAzbkAXJrIxAN8U4ogecHUnlzcWGiv3ktNmR132AfsBJnIt6BzxHafojeOJDDOsXIr0sBDuJan5-Kg38_JGOaBLII0Vl8KLIduz5ciiU9Nj149LNGNL2qYdKfHD0JJzE8eHV5Uab-PA4pAx1aRm_BsyfNWnxhLDNbCmFX3eggDRU829aAeoexnuRXC6ItEDH3jv7LWU3b5SP5Mj7Ec6fkIRe6a_XKZneJZqX1ACB_Zom6kR3WVR-hyO7vAV-98adACjckX-PUdpr1kNpr6BBRucA0xPxB2bFXV26NK3jyNAr0t-iRonUeD8_nllVxmsfS_cZ4XK1uuxL2nyOjAlXVM2JmRSJMgsWBN8BLUIpDNmhuvUQ76oUj_NRfM1cYkBzLoravE4FlK_X8kJpQCJ6Q4Ia-MY5ioliO7CYXaDipVMlPCakq0priQfnAYneBl37WbIA8sYWcnUyxUrp2BSHOglva0r8ASX6PVgEZRR6LOpC6iTUJ7JdgBpQFkG98MA8toxUkoPRIVfGj0bu_KTXExu9HqQV5pEGoNJXLB40NfYBZ6g5gGDzMXu2SnKv4RKIcysP3O7V6lGcDeycteVTPzS9sWFWNmAl2x6tYo37IlDSiYDgppo8xE_rB5Ewf8QCQqzDD-ifaHg_pWIZzd9_loA4-VC9romv_WBbtod5inALCW8xsXlc0kEAzquE59a-UbokMi0WpkL5zfFvPV4MQTveqaVWq7_fyTRpEnx92fWoqUi_uPiNDACzCWmQQiBDSx-4x7uyb2NvjUifEhc26LGfaqh8-TuTpliMNvtkbwhXwzlVx3wJIL5-CUXroymX13bkcvXUiX6HKPwx-UgfhttyndNRfiRK7nP55oLaCeJZCSt_umzJH3pzkzZFgLqUY4UBIBbrOLjcoGVmNHRZQ0ImeY56bi7OY__zzr3-47V2OWS3fv-nhJjZyUO7AF9tCY2Gc3TUya-XtypdWKE2LuvppZVHpO8tYp3uUEaQSFYITQBbGh8qitir7zT7eEXx4UfNv28EhdItlwIVNm4PCyffdwrGppU5WxUiaoLyB7qYPIOO-xSYhhNu_EbJyV5i1ayobJu5py6edbVBdf2qQ2FRMeWNX4ro5GO0ccpJ3JTEJOU9RtxPHYLnKVv4l0RWAxmyIfDzPrXr30WJHVc9GKQbNF1499zHUhmUQyX4-pbrVZ6o-ty-HCAkvs2sIuxTVv-evAVRBNKtLZXcLbd7Wafnd6e63KMmZlFAavMal5Gmsi5E4BULp9TYvcet6JMnfDPXDKn1a_bv_81-a36UpNzn4Y1neQfCL340Zy4E2fqht3XBn_xfltvWUHudW_sGs34x2bgto-9csB2X6He4WutvcGX-Dmx-ciAyCuUnRKNIAWwU7aLudTyNyZ9IZWq8wmJhnhN9blGpJqUIipi9j6t7SCbFJMcej0JBxb1n8pTK2eDNazufPh60JKl2dJi1kF6jUZoEJAP4y91wuKiuxHZLi3_ADoMwhRmwRA0p3DbMvrI9jgXkJolUQtjpMXHm8xKXbKrOH7vXJNDTqvCsmLvd4UAvVtxfNN9pNa2OT9Fr8yOBBdGvJSQ10qlxzIlISn-uyY5_uiZYUVT-HJUV796gHEw64xBS-7uZLtoQjloYHCD7nEdPpsyjfoBSeAhD_GENb_T1ULtkv1KRggGDX1v-n-X__DyDFFrFuCwAA"
+	const [embedConfig, setEmbedConfig] = useState({
+    type: 'report',
+    accessToken: accessToken,
+    embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=f6bfd646-b718-44dc-a378-b73e6b528204&groupId=be8908da-da25-452e-b220-163f52476cdd&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQifQ%3d%3d',
+    id: 'f6bfd646-b718-44dc-a378-b73e6b528204',
+});
+
+	return(
+		<div>
+			<div style={{height: "100vh", margin: 50}}>
+			<div style={{display: 'flex', alignItems: 'center', justifyContent: "space-between"}}>
+				<p style={{padding: 10}}>PointCore</p>
+				<a href="#" style={{padding: 10}}>Log Out</a>
+			</div>
+				<Report
+				style={{height: "100vh"}}
+				embedType="report"
+				embedId={embedConfig.id}
+				embedUrl={embedConfig.embedUrl}
+				accessToken={embedConfig.accessToken}
+				permissions="All"
+				onEmbedded={()=>{console.log('Embedded')}}
+				tokenType={"Embed"}
+				/>
+			</div>
+		</div>
+	)
+}
+
+export default Dashboard;
