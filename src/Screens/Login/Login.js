@@ -93,9 +93,8 @@ const Login=(props)=>{
     return (
 
       <div id="loginScreenContainer">
-      <Background/>
-        <div id="loginImageView">
-        </div>
+      <Background width="60%"/>
+        <div id="loginImageView"/>
         <div id="loginFormView">
           <div className="formViewBlock headerOrFooter" />
           <div className="formViewBlock">
